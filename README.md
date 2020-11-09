@@ -8,8 +8,8 @@
    - [ ] You will deploy your app to a free Netlify account by enabling continuous deployment from GitHub to Netlify
 
 ## App will retrieve data from the Open Weather API:
-    - Documentation: https://openweathermap.org/current
-    - Request API key here: https://home.openweathermap.org/users/sign_up
+    - [OpenWeather Documentation](https://openweathermap.org/current) : https://openweathermap.org/current
+    - [OpenWeather API](https://home.openweathermap.org/users/sign_up) : https://home.openweathermap.org/users/sign_up
 
 ## Project Submission:
     - A link to your GitHub code repository
