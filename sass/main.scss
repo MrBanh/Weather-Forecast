@@ -1,0 +1,48 @@
+@import "./mixins";
+@import "./variables";
+@import "./cardsContainer";
+@import "./weatherCard";
+@import "./infoCard";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Montserrat', sans-serif;
+
+    @include responsive(phone) {
+        height: auto; // Prevent top from cutting off in mobile view
+    }
+}
+
+main {
+    height: 100%;
+    padding: 25px 0;
+    @include flex();
+}
+
+ul {
+    list-style-type: none;
+}
+
+.location-icon {
+    margin-right: 5px;
+    height: 1em;
+    width: 1em;
+    stroke: currentColor;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.container {
+    @include flex();
+    max-width: 1024px;
+    width: 100%;
+}

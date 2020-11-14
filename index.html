@@ -4,13 +4,109 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/css/main.min.css">
     <script type="module" src="./js/main.js"></script>
     <title>Document</title>
 </head>
 
 <body>
+    <main>
+        <div class="container">
+            <div class="cards-container">
 
+                <div class="weather-card">
+
+                    <div class="weather-container">
+                        <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="weather icon" class="weather-icon">
+                        <h2 class="weather-temperature">29°C</h2>
+                        <h3 class="weather-description">Sunny</h3>
+                    </div>
+                    <div class="date-location-container">
+                        <div class="date-container">
+                            <h4 class="date-dayname">Tuesday</h4>
+                            <span class="date-day">15 Jan 2019</span>
+                        </div>
+
+                        <div class="location-container">
+                            <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                <path d="M11.5,5c0,2.485-4.5,8.5-4.5,8.5S2.5,7.485,2.5,5a4.5,4.5,0,0,1,9,0Z" />
+                                <circle class="a" cx="7" cy="5" r="1.5" />
+                            </svg>
+
+                            <span class="location">Paris, FR</span>
+                        </div>
+                    </div>
+                </div> <!-- End of weather-card -->
+
+                <div class="info-card">
+                    <div class="today-info-container">
+                        <div class="today-info">
+                            <div id="precipitation">
+                                <span class="title">PRECIPITATION</span>
+                                <span class="info-value">0 %</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div id="humidity">
+                                <span class="title">HUMIDITY</span>
+                                <span class="info-value">34 %</span>
+                                <div class="clear"></div>
+                            </div>
+                            <div id="wind">
+                                <span class="title">WIND</span>
+                                <span class="info-value">0 km/h</span>
+                                <div class="clear"></div>
+                            </div>
+                        </div>
+                    </div> <!-- End of today-info-container -->
+
+                    <div class="week-info-container">
+                        <ul class="week-list">
+                            <li class="active">
+                                <img src="http://openweathermap.org/img/wn/01d@2x.png" alt="day icon" class="day-icon">
+                                <div class="day-name">Tue</div>
+                                <div class="day-temp">29°C</div>
+                            </li>
+                            <li>
+                                <img src="http://openweathermap.org/img/wn/03d@2x.png" alt="day icon" class="day-icon">
+                                <div class="day-name">Wed</div>
+                                <div class="day-temp">21°C</div>
+                            </li>
+                            <li>
+                                <img src="http://openweathermap.org/img/wn/09d@2x.png" alt="day icon" class="day-icon">
+                                <div class="day-name">Thu</div>
+                                <div class="day-temp">08°C</div>
+                            </li>
+                            <li>
+                                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="day icon" class="day-icon">
+                                <div class="day-name">Fri</div>
+                                <div class="day-temp">19°C</div>
+                            </li>
+                            <li>
+                                <img src="http://openweathermap.org/img/wn/50d@2x.png" alt="day icon" class="day-icon">
+                                <div class="day-name">Sat</div>
+                                <div class="day-temp">19°C</div>
+                            </li>
+
+                            <div class="clear"></div>
+                        </ul>
+                    </div> <!-- End of week-info-container -->
+
+                    <div class="location-button-container">
+                        <button class="location-button">
+                            <svg class="location-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+                                <path d="M11.5,5c0,2.485-4.5,8.5-4.5,8.5S2.5,7.485,2.5,5a4.5,4.5,0,0,1,9,0Z" />
+                                <circle class="a" cx="7" cy="5" r="1.5" />
+                            </svg>
+                            <div>Change Location</div>
+                        </button>
+                    </div> <!-- End of location-button-container-->
+
+                </div> <!-- End of info-card -->
+
+            </div> <!-- End of cards-container -->
+        </div> <!-- End of container -->
+    </main>
 </body>
 
 </html>

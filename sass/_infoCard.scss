@@ -1,0 +1,85 @@
+.info-card {
+    position: relative;
+    color: $light-color;
+    background-color: $dark-color;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    padding: 25px 0;
+    @include flex(column, space-around, stretch);
+
+    .today-info-container {
+        margin: 10px 25px;
+
+        .today-info > div {
+            margin-bottom: 10px;
+        }
+
+        .today-info > div .title {
+            font-weight: 700;
+        }
+
+        .today-info > div .info-value {
+            float: right;
+        }
+    }
+
+    .week-info-container {
+        margin: 10px 25px;
+        .week-list {
+            box-shadow: $box-shadow-inner;
+            @include flex();
+
+            & > li {
+                padding: 10px;
+                cursor: pointer;
+                text-align: center;
+                border-radius: $border-radius;
+                transition: 200ms ease;
+                transform: scale(1);
+            }
+
+            & > li:hover {
+                transform: scale(1.1);
+                background-color: $light-color;
+                color: $dark-color;
+            }
+
+            & > li.active {
+                background-color: $light-color;
+                color: $dark-color;
+            }
+
+            .day-icon {
+                height: 50px;
+                width: 50px;
+            }
+
+            .day-temp {
+                font-weight: 700;
+            }
+        }
+    }
+
+    .location-button-container {
+        margin: 10px 25px;
+
+        .location-button {
+            width: 100%;
+            border-radius: 25px;
+            font-size: 1.1em;
+            border: none;
+            padding: 10px;
+            box-shadow: $box-shadow-inner;
+            font-weight: 700;
+            color: $light-color;
+            background: $gradient;
+            transition: 200ms ease;
+            cursor: pointer;
+            @include flex();
+
+            &:hover {
+                transform: scale(.9);
+            }
+        }
+    }
+}

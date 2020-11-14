@@ -1,0 +1,9 @@
+.cards-container {
+    @include flex(row, center, stretch);
+    background-color: $dark-color;
+    border-radius: $border-radius;
+
+    @include responsive(phone) {
+        @include flex(column, center, center);
+    }
+}

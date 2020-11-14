@@ -1,0 +1,20 @@
+@mixin flex($dir: row, $justify: center, $align: center) {
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin responsive($device) {
+    @if $device==phone {
+        @media screen and (max-width: 500px) {
+            @content;
+        }
+    }
+
+    @if $device==tablet {
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            @content;
+        }
+    }
+}

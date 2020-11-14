@@ -1,0 +1,46 @@
+
+.weather-card {
+    position: relative;
+    height: 400px;
+    width: 300px;
+    color: $dark-color;
+    background-color: $light-color;
+    box-shadow: $box-shadow;
+    border-radius: $border-radius;
+    transform: scale(1.05);
+    z-index: 1;
+
+    @include flex(column, space-around, center);
+
+    .weather-container {
+        text-align: center;
+        font-size: 2em;
+        // TODO: 3d
+
+        .weather-icon {
+            height: 125px;
+            width: 125px;
+        }
+
+        .weather-temperature {
+        }
+
+        .weather-description {
+        }
+    }
+
+    .date-location-container {
+        width: 100%;
+        @include flex(row, space-around, flex-end);
+        // TODO: 3d
+
+        .date-dayname {
+        }
+
+        .date-day {
+        }
+
+        .location {
+        }
+    }
+}
