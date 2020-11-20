@@ -1,6 +1,6 @@
 import { WEATHER_API_KEY as api, WEATHER_API_KEY } from "./apikey.js";
 
-import initEffects from "./effects.js";
+import { initEffects, unInitEffects, removeEffect } from "./effects.js";
 import Forecast from "./Forecast.js";
 
 let forecast = new Forecast();
@@ -14,7 +14,24 @@ document.addEventListener("readystatechange", (event) => {
 
 const initApp = () => {
     // App event listeners
-    initEffects();
+    // Only enable 3d effects for non-mobile view
+    if (window.innerWidth > 768 && !detectMobile()) {
+        initEffects();
+    }
+
+    window.addEventListener("resize", (event) => {
+        // If not mobile view
+        if (window.innerWidth > 768 && !detectMobile()) {
+            // enable 3d effects
+            initEffects();
+        } else {
+            // if resized to desktop view, disable 3d effects
+            unInitEffects();
+            // remove 3d effect in the case user was previously in desktop view
+            removeEffect();
+        }
+    });
+
     const entryForm = document.querySelector("#entry-form");
     entryForm.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -341,6 +358,12 @@ const getLocationText = () => {
 };
 
 // Misc Utils //
+const detectMobile = () => {
+    return /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(
+        navigator.userAgent,
+    );
+};
+
 const titleCase = (s) => {
     return s.toLowerCase().replace(/(^|\s)\S/g, (L) => L.toUpperCase());
 };

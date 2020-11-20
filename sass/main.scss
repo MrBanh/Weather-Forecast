@@ -16,10 +16,6 @@ body {
     height: 100%;
     width: 100%;
     font-family: 'Montserrat', sans-serif;
-
-    @include responsive(landscape) {
-        height: auto; // Prevent top from cutting off in mobile view
-    }
 }
 
 body {
@@ -27,8 +23,7 @@ body {
 }
 
 main {
-    height: 100%;
-    @include flex(column, center,center);
+    width: 100%;
 }
 
 section {
@@ -52,10 +47,14 @@ ul {
 
 .container {
     @include flex();
-    padding: 25px 0;
+    padding: 100px 0;
     margin: auto;
     max-width: 1024px;
     max-height: 1024px;
     width: 100%;
     height: 100%;
+
+    @include responsive(landscape) {
+        padding: 25px 0;
+    }
 }
