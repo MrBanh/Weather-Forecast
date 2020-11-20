@@ -78,7 +78,7 @@ export default class Forecast {
     }
 
     formatTemp(temp) {
-        return `${parseInt(temp)} ${this.getTempUnit()}`;
+        return `${Math.round(parseFloat(temp))} ${this.getTempUnit()}`;
     }
 
     addToList(weather) {
