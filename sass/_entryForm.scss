@@ -1,0 +1,100 @@
+form {
+    margin: 25px auto;
+    max-width: 700px;
+    @include flex(row, center, center);
+
+    @include responsive(landscape) {
+        @include flex(column, space-between, stretch);
+        margin: auto;
+    }
+
+    .form-group {
+        position: relative;
+        padding: 15px 0 0;
+        margin: 10px;
+    }
+
+    .form-field {
+        font-family: inherit;
+        width: 100%;
+        border: 0;
+        border-bottom: 2px solid $dark-color;
+        outline: 0;
+        font-size: 1.3rem;
+        color: $dark-color;
+        padding: 7px 0;
+        background: transparent;
+        transition: $transition;
+
+        &::placeholder {
+            color: transparent;
+        }
+
+        &:placeholder-shown ~ .form-label {
+            font-size: 1.3rem;
+            cursor: text;
+            top: 20px;
+        }
+    }
+
+    .form-label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: $transition;
+        font-size: 1rem;
+    }
+
+    .form-field:focus {
+        ~ .form-label {
+            position: absolute;
+            top: 0;
+            display: block;
+            transition: $transition;
+            font-weight: 700;
+            color: $primary-color;
+        }
+        padding-bottom: 6px;
+        border-width: 4px;
+        border-image: $gradient;
+        border-image-slice: 1;
+    }
+
+    button[type="submit"] {
+        cursor: pointer;
+        background-color: transparent;
+        border: 0;
+        color: $primary-color;
+        min-height: 48px;
+        min-width: 48px;
+        transition: $transition;
+
+        @include responsive(landscape) {
+            margin: 0 25px;
+        }
+
+        .search-icon {
+            fill: none;
+            height: 2.5em;
+            width: 2.5em;
+            stroke: currentColor;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 2;
+            overflow: visible;
+        }
+
+        &:focus,
+        &:hover {
+            outline-color: $primary-color;
+        }
+    }
+}
+
+// Reset input
+.form-field {
+    &:required,
+    &:invalid {
+        box-shadow: none;
+    }
+}

@@ -1,5 +1,6 @@
 @import "./mixins";
 @import "./variables";
+@import "./entryForm";
 @import "./cardsContainer";
 @import "./weatherCard";
 @import "./infoCard";
@@ -16,7 +17,7 @@ body {
     width: 100%;
     font-family: 'Montserrat', sans-serif;
 
-    @include responsive(phone) {
+    @include responsive(landscape) {
         height: auto; // Prevent top from cutting off in mobile view
     }
 }
@@ -27,8 +28,11 @@ body {
 
 main {
     height: 100%;
-    padding: 25px 0;
-    @include flex();
+    @include flex(column, center,center);
+}
+
+section {
+    width: 100%;
 }
 
 ul {
@@ -43,10 +47,13 @@ ul {
     fill: none;
     stroke-linecap: round;
     stroke-linejoin: round;
+    overflow: visible;
 }
 
 .container {
     @include flex();
+    padding: 25px 0;
+    margin: auto;
     max-width: 1024px;
     max-height: 1024px;
     width: 100%;

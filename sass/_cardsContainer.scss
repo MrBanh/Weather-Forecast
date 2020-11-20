@@ -1,10 +1,10 @@
 .cards-container {
     @include flex(row, center, stretch);
     background-color: $dark-color;
-    border-radius: $border-radius;
+    border-radius: $border-radius-card;
     transform-style: preserve-3d; // 3-d preserved for cards
 
-    @include responsive(phone) {
+    @include responsive(landscape) {
         @include flex(column, center, center);
     }
 }
