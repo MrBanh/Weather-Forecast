@@ -30,5 +30,11 @@
         width: 100%;
         transition: $transition;
         @include flex(row, space-around, flex-end);
+
+        .date-container {
+            .date-dayname {
+                font-weight: 700;
+            }
+        }
     }
 }

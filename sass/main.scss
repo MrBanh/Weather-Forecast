@@ -20,14 +20,30 @@ body {
 
 body {
     perspective: 1000px; // create 3d space for card rotation
+    display: flex;
 }
 
 main {
+    margin: auto;
     width: 100%;
+}
+
+h1 {
+    text-align: center;
+    color: $primary-color;
 }
 
 section {
     width: 100%;
+}
+
+.sr-only {
+    position: absolute;
+    left: -10000px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
 
 ul {

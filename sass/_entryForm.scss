@@ -98,3 +98,12 @@ form {
         box-shadow: none;
     }
 }
+
+// Invalid entry
+.invalid-feedback {
+    text-align: center;
+    color: red;
+    font-weight: 700;
+    visibility: hidden;
+    outline: none;
+}

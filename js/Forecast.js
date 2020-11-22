@@ -77,6 +77,12 @@ export default class Forecast {
         }
     }
 
+    /**
+     *  @description
+     *  Rounds the temperature, and returns the temperature with the temperature unit as a string 
+     * @param {string} temp - Temperature
+     * @returns {string} - Temperature with temperature unit
+     */
     formatTemp(temp) {
         return `${Math.round(parseFloat(temp))} ${this.getTempUnit()}`;
     }
