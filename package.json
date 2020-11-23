@@ -1,0 +1,31 @@
+{
+    "name": "Banh_INF651_FinalProject",
+    "version": "1.0.0",
+    "description": "- [ ] The current weather conditions for a default location should display when the app loads. The weather display should include the icon provided by the API.\r    - [ ] Users should be able to save their location as persistent data which is used as the default when the app loads\r    - [ ] Users should be able to search for the current weather in other locations\r    - [ ] Users should be able to navigate your app with a keyboard and screen reader\r    - [ ] You will deploy your app to a free Netlify account by enabling continuous deployment from GitHub to Netlify",
+    "main": "index.js",
+    "scripts": {
+        "dev": "rm -rf ./development && rm -rf ./.cache && parcel src/index.html --out-dir development -p 3000",
+        "build": "parcel build src/index.html --out-dir dist --public-url ./"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/MrBanh/Weather-Forecast.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/MrBanh/Weather-Forecast/issues"
+    },
+    "homepage": "https://github.com/MrBanh/Weather-Forecast#readme",
+    "dependencies": {
+        "@babel/runtime": "^7.12.5",
+        "core-js": "^3.7.0",
+        "@babel/core": "^7.12.7",
+        "@babel/plugin-transform-runtime": "^7.12.1",
+        "@babel/runtime-corejs3": "^7.12.5",
+        "autoprefixer": "^9.8.6",
+        "parcel-bundler": "^1.12.4",
+        "sass": "^1.29.0"
+    }
+}
