@@ -1,7 +1,7 @@
-import { WEATHER_API_KEY as api, WEATHER_API_KEY } from "./apikey.js";
 import { initEffects, unInitEffects, removeEffect } from "./effects.js";
 import Forecast from "./Forecast.js";
 
+const WEATHER_API_KEY = process.env.WEATHER_API_KEY;
 let forecast = new Forecast();
 const DAYS_FORECASTED = 5;
 
@@ -158,6 +158,10 @@ const processSubmission = async () => {
 
         // Get Weather Forecast and update forecast object
         await getForecastData();
+
+        // Reset the active week-list item upon user submission
+        removeActive();
+        setActive(weekListItemElements[0]);
 
         // Render forecast data to page
         renderCards();
